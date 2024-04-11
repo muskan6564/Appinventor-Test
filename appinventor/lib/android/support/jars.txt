@@ -1,6 +1,9 @@
 annotation.jar
+activity.jar
 appcompat.jar
+appcompatresources.jar
 asynclayoutinflater.jar
+cardview.jar
 collection.jar
 constraintlayout.jar
 constraintlayout-solver.jar
@@ -13,7 +16,11 @@ customview.jar
 documentfile.jar
 drawerlayout.jar
 fragment.jar
+emoji2.jar
+emoji2-views-helper.jar
 interpolator.jar
+kotlin-stdlib.jar
+kotlin-stdlib-common.jar
 legacy-support-core-ui.jar
 legacy-support-core-utils.jar
 lifecycle-common.jar
@@ -23,7 +30,10 @@ lifecycle-runtime.jar
 lifecycle-viewmodel.jar
 loader.jar
 localbroadcastmanager.jar
+material.jar
 print.jar
+recyclerview.jar
+savedstate.jar
 slidingpanelayout.jar
 swiperefreshlayout.jar
 vectordrawable.jar
