@@ -73,11 +73,11 @@ public class GingerbreadUtil {
   public static void enableNFCWriteMode(Activity activity, NfcAdapter nfcAdapter, String textToWrite){
     NdefRecord textRecord = createTextRecord(textToWrite,true);
     NdefMessage msg = new NdefMessage(new NdefRecord[] { textRecord });
-    nfcAdapter.enableForegroundNdefPush(activity, msg);
+    //nfcAdapter.enableForegroundNdefPush(activity, msg);
   }
 
   public static void disableNFCAdapter(Activity activity, NfcAdapter nfcAdapter){
-    nfcAdapter.disableForegroundNdefPush(activity);
+    //nfcAdapter.disableForegroundNdefPush(activity);
   }
 
   public static NdefRecord createTextRecord(String payload, boolean encodeInUtf8) {

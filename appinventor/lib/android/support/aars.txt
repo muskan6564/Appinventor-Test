@@ -1,5 +1,8 @@
 appcompat.aar
+activity.aar
+appcompatresources.aar
 asynclayoutinflater.aar
+cardview.aar
 constraintlayout.aar
 coordinatorlayout.aar
 core.aar
@@ -8,6 +11,8 @@ cursoradapter.aar
 customview.aar
 documentfile.aar
 drawerlayout.aar
+emoji2.aar
+emoji2-views-helper.aar
 fragment.aar
 interpolator.aar
 legacy-support-core-ui.aar
@@ -18,7 +23,10 @@ lifecycle-runtime.aar
 lifecycle-viewmodel.aar
 loader.aar
 localbroadcastmanager.aar
+material.aar
 print.aar
+recyclerview.aar
+savedstate.aar
 slidingpanelayout.aar
 swiperefreshlayout.aar
 vectordrawable.aar

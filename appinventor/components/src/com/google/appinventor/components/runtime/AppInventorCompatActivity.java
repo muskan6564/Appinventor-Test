@@ -18,10 +18,12 @@ import android.widget.FrameLayout.LayoutParams;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatCallback;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.view.ActionMode;
 import androidx.appcompat.view.ActionMode.Callback;
+import com.google.android.material.color.DynamicColors;
 import com.google.appinventor.components.common.ComponentConstants;
 import com.google.appinventor.components.runtime.util.PaintUtil;
 import com.google.appinventor.components.runtime.util.SdkLevel;
@@ -37,7 +39,7 @@ import com.google.appinventor.components.runtime.util.theme.ThemeHelper;
  * correct theme.
  * @author ewpatton@mit.edu (Evan W. Patton)
  */
-public class AppInventorCompatActivity extends Activity implements AppCompatCallback {
+public class AppInventorCompatActivity extends AppCompatActivity implements AppCompatCallback {
 
   public enum Theme {
     PACKAGED,
@@ -63,6 +65,7 @@ public class AppInventorCompatActivity extends Activity implements AppCompatCall
 
   @Override
   public void onCreate(Bundle icicle) {
+    DynamicColors.applyToActivitiesIfAvailable(getApplication());
     classicMode = classicMode || SdkLevel.getLevel() < SdkLevel.LEVEL_HONEYCOMB;
     if (classicMode) {
       themeHelper = new ClassicThemeHelper();
@@ -79,8 +82,8 @@ public class AppInventorCompatActivity extends Activity implements AppCompatCall
       if (currentTheme != Theme.PACKAGED) {
         applyTheme();
       }
-      appCompatDelegate = AppCompatDelegate.create(this, this);
-      appCompatDelegate.onCreate(icicle);
+      // appCompatDelegate = AppCompatDelegate.create(this, this);
+      // appCompatDelegate.onCreate(icicle);
     }
 
     super.onCreate(icicle);

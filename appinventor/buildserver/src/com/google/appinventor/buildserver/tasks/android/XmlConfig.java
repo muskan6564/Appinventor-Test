@@ -184,7 +184,7 @@ public class XmlConfig implements AndroidTask {
           parentTheme = "android:Theme.Holo.Light";
         }
       } else {
-        parentTheme = theme.replace("AppTheme", "Theme.AppCompat");
+        parentTheme = theme.replace("AppTheme", "Theme.Material3");
       }
       if (!"true".equalsIgnoreCase(actionbar)) {
         if (parentTheme.endsWith("DarkActionBar")) {
@@ -193,6 +193,7 @@ public class XmlConfig implements AndroidTask {
           parentTheme += ".NoActionBar";
         }
       }
+      parentTheme = parentTheme.replaceAll(".DarkActionBar", "");
     }
     String colorPrimary = context.getProject().getPrimaryColor();
     String colorPrimaryDark = context.getProject().getPrimaryColorDark();
